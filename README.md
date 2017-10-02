@@ -8,9 +8,9 @@ Alert Logic agent runs as a daemonset in k8s cluster.
 
 * Docker image for alert logic is in nexus (courtesy Membership)
 
-* Create a secret to hold the nexus credentials. The credentials will be used to pull the alert logic docker image from the nexus repository. Password is stored in Lastpass (`upp-nexus`)
+* Create a secret to hold the nexus credentials. The credentials will be used to pull the alert logic docker image from the nexus repository. Password is stored in Lastpass (For upp: `upp-docker`. For pac: `pac-docker`)
 
-    `kubectl create secret docker-registry nexusregistry --docker-server=nexus.in.ft.com:5000 --docker-username=upp-nexus --docker-password=<password_from_lastpass> --docker-email=universal.publishing.platform@ft.com`
+    `kubectl create secret docker-registry nexusregistry --docker-server=nexus.in.ft.com:5000 --docker-username=<nexus_username_for_upp/pac> --docker-password=<password_from_lastpass> --docker-email=universal.publishing.platform@ft.com`
 
 * Alert logic registration key should be stored as a secret in the cluster. Alert logic registration key is stored in LastPass (`AlertLogic Setup`)
 
