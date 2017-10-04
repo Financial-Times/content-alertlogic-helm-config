@@ -17,6 +17,11 @@ spec:
         app: {{ .Values.service.name }} 
         visualize: "true"
     spec:
+      tolerations:
+      - effect: NoSchedule
+        key: node.alpha.kubernetes.io/role
+        operator: Equal
+        value: master
       volumes:
       - name: docker-sock
         hostPath:
@@ -41,10 +46,5 @@ spec:
             configMapKeyRef:
               name: global-config
               key: alert-logic-host
-      tolerations:
-            - effect: NoSchedule
-              key: node.alpha.kubernetes.io/role
-              operator: Equal
-              value: master
         resources: 
 {{ toYaml .Values.resources | indent 12 }}
