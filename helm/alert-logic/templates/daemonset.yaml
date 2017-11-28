@@ -18,10 +18,7 @@ spec:
         visualize: "true"
     spec:
       tolerations:
-      - effect: NoSchedule
-        key: node.alpha.kubernetes.io/role
-        operator: Equal
-        value: master
+      - operator: "Exists"
       volumes:
       - name: docker-sock
         hostPath:
