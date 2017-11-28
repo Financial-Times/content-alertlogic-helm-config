@@ -1,4 +1,4 @@
-## alert-logic
+## alert-logic helm config for content
 
 ## Introduction
 
