@@ -36,8 +36,8 @@ spec:
         - name: ALERT_LOGIC_KEY
           valueFrom:
             secretKeyRef:
-              name: alertlogicsecret
-              key: registration-key
+              name: global-secrets
+              key: alertlogic.registration-key
         - name: ALERT_LOGIC_HOST
           valueFrom:
             configMapKeyRef:
