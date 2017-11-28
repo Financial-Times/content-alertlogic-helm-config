@@ -2,7 +2,8 @@
 
 ## Introduction
 
-Alert Logic agent runs as a daemonset in k8s cluster.
+This repo holds the helm config for the alert logic agent for the content k8s clusters.
+Alert Logic agent runs as a daemonset in k8s cluster. 
 
 ## Set up instructions
 
