@@ -1,4 +1,4 @@
 apiVersion: v1
-description: alert_logic Helm chart for Kubernetes
-name: alert_logic
+description: alert-logic Helm chart for Kubernetes
+name: alert-logic
 version: 0.0.0  # this entry can be left untouched as it is automatically handled by Jenkins pipeline
