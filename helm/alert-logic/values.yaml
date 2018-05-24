@@ -5,7 +5,7 @@ service:
   name: "" # The name of the service, should be defined in the specific app-configs folder.
   hasHealthcheck: "true"
 image:
-  repository: nexus.in.ft.com:5000/membership/ft-al-agent:latest
+  repository: alertlogic/al-agent-container:latest
   pullPolicy: Always
 resources:
   limits:
