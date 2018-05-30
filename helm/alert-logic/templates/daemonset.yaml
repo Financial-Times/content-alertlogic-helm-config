@@ -30,8 +30,6 @@ spec:
         hostPath:
           path: /proc
           type: Directory
-      imagePullSecrets:
-        - name: nexusregistry 
       containers:
       - name: {{ .Values.service.name }} 
         image: {{ .Values.image.repository }} 
