@@ -35,11 +35,7 @@ spec:
         image: {{ .Values.image.repository }} 
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         securityContext:
-          capabilities:
-            add:
-            - SYS_ADMIN
-            - NET_ADMIN
-            - NET_BIND_SERVICE
+          privileged: true
         volumeMounts:
         - mountPath: /var/run/docker.sock
           name: docker-sock-volume
