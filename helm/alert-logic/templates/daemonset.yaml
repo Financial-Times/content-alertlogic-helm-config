@@ -45,11 +45,5 @@ spec:
           name: docker-sock-volume
         - mountPath: /host/proc
           name: docker-proc-volume
-        env:
-          - name: KEY
-            valueFrom:
-              secretKeyRef:
-                name: global-secrets
-                key: alertlogic.registration-key
         resources:
 {{ toYaml .Values.resources | indent 12 }}
