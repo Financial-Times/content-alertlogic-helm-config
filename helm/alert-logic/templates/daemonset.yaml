@@ -20,6 +20,7 @@ spec:
         visualize: "true"
     spec:
       tolerations:
+      - operator: "Exists"
       - key: node-role.kubernetes.io/master
         effect: NoSchedule
       volumes:
